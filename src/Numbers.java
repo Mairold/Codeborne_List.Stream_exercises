@@ -21,7 +21,7 @@ public class Numbers {
     }
 
     public List<Integer> concatenate(List<Integer> list1, List<Integer> list2) {
-        ArrayList<Integer> result = new ArrayList<>(list1);
+        List<Integer> result = new ArrayList<>(list1);
         result.addAll(list2);
         return result;
     }

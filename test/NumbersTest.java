@@ -1,9 +1,12 @@
+
+
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
 
 class NumbersTest {
 
@@ -17,6 +20,7 @@ class NumbersTest {
     @Test
     void sumOfElements_Imperative_negative() {
         assertEquals(50, numbers.sumOfElementsImperative(List.of(-10, 100, -40)));
+        assertThat(numbers.sumOfElementsImperative(List.of(-10, 100, -40))).isEqualTo(50);
     }
 
     @Test
@@ -84,4 +88,6 @@ class NumbersTest {
     void sort_Special_BiggerList() {
         assertEquals(List.of(-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5), numbers.sortSpecial(List.of(-1, 3, -5, 5, -4, 1, 0, 4, -3, 2, -2)));
     }
+
+
 }
